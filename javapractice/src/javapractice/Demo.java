@@ -1,6 +1,6 @@
 package javapractice;
 
-public class Demo{
+class Demo{
 public void showGreetings() {
      System.out.print("Hi All,Welcome to TNS!");
  }
