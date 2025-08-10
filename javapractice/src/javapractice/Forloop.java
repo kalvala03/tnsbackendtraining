@@ -18,5 +18,22 @@ public class Forloop {
 				System.out.print(i+" ");
 			}
 		}
+		
+		
+		//Write a program to check given number is prime number or not.
+		System.out.print("Enter a num:");
+		int n=sc.nextInt();
+		int fc=0;
+		for(int i = 2; i*i <= n; i++){
+			if(n%i==0) {
+				fc++;
+			}
+		}
+		if(fc==0) {
+			System.out.println(n+" is a primenumber");
+		}
+		else {
+			System.out.println(n+" is not a primenumber");
+		}
 	}
 }
