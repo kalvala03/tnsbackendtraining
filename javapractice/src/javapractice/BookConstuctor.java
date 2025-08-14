@@ -28,8 +28,9 @@ public class BookConstuctor {
 	// 2. Parameterized Constructor
     // Allows initializing instance variables with specific values at object creation.
 	BookConstuctor(String author,String title,int publicationyear){
-		this.Author=author;
-		this.Title=title;
+		//Without this, both title and title refer to the parameter — so the instance variable wouldn’t be updated.
+		this.Author=author;  // "author" → parameter
+		this.Title=title;    // "this.title" → instance variable	
 		this.publicationyear=publicationyear;
 		System.out.println("This is a Parameterized Constructor");
 	}
