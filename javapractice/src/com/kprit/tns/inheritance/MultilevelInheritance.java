@@ -19,6 +19,5 @@ public class MultilevelInheritance {
 	public static void main(String[]args) {
 		MultilevelInheritance ob=new MultilevelInheritance();
 		WhatsappV3 obj=ob.new WhatsappV3();
-		
 	}
 }
