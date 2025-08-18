@@ -3,6 +3,11 @@ package com.kprit.tns.interfaces;
 public class InterfaceMain {
 
 	public static void main(String[] args) {
+		
+		// Calling static method from interface directly
+        FoodDelivery.appInfo();
+        
+		//parent obj=new child();
 		OnlineOrder order1 = new Zomato();
         order1.deliverOrder("Pizza");
         order1.pay(299);
@@ -17,8 +22,7 @@ public class InterfaceMain {
         order2.trackOrder(102);
         order2.safetyGuidelines();
 
-        // Calling static method from interface directly
-        FoodDelivery.appInfo();
+        
 	}
 
 }
