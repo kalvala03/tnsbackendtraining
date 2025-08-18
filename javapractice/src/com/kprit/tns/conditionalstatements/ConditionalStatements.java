@@ -1,4 +1,4 @@
-package javapractice;
+package com.kprit.tns.conditionalstatements;
 
 public class ConditionalStatements {
 	public static void main(String args[]) {

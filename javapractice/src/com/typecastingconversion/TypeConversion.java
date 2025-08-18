@@ -1,4 +1,4 @@
-package javapractice;
+package com.typecastingconversion;
 
 public class TypeConversion {
 	

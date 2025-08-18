@@ -1,4 +1,4 @@
-package javapractice;
+package com.kprit.tns.operators;
 
 public class Unary {
 	public static void main(String[] args) {

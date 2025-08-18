@@ -1,4 +1,4 @@
-package javapractice;
+package com.kprit.tns.loops;
 
 public class Dowhile {
 	public static void main(String[]args) {

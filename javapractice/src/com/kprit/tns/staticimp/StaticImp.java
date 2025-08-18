@@ -1,4 +1,4 @@
-package javapractice;
+package com.kprit.tns.staticimp;
 
 public class StaticImp {
 	String name;

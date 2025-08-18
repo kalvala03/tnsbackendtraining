@@ -1,4 +1,4 @@
-package javapractice;
+package com.kprit.tns.variabletypes;
 
 public class VariableDemoMain {
 

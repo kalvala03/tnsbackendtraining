@@ -1,6 +1,6 @@
-package javapractice;
+package com.kprit.tns.constructor;
 
-public class BookConstuctor {
+public class ConstructorDemo {
 	String Author;
 	String Title;
 	int publicationyear;
@@ -24,7 +24,7 @@ public class BookConstuctor {
 	// 1. Default Constructor (No-argument constructor)
     // Automatically provided by Java if no other constructor is defined.
     // Initializes instance variables with default values.
-	BookConstuctor(){
+	ConstructorDemo(){
 		this.Author="Sucheta Raj Khanna";
 		this.Title="The Stars Light the Way";
 		this.publicationyear=2025;
@@ -33,7 +33,7 @@ public class BookConstuctor {
 	
 	// 2. Parameterized Constructor
 	// Uses this to differentiate between instance variables and parameters
-	BookConstuctor(String author,String title,int publicationyear){
+	ConstructorDemo(String author,String title,int publicationyear){
 		
 		this.Author=author;  
 		this.Title=title;    	
@@ -44,7 +44,7 @@ public class BookConstuctor {
 	// 3. Copy Constructor
     // Creates a new object by copying the values of an existing object.
 	// Uses this to assign from another object
-	BookConstuctor(BookConstuctor dupbook){
+	ConstructorDemo(ConstructorDemo dupbook){
 		this.Author=dupbook.Author;
 		this.Title=dupbook.Title;
 		this.publicationyear=dupbook.publicationyear;
@@ -57,17 +57,17 @@ public class BookConstuctor {
     }
 	
     //  Method chaining using this
-    BookConstuctor setAuthor(String Author) {
+    ConstructorDemo setAuthor(String Author) {
         this.Author = Author;
         return this; // returns the current object
     }
     
-    BookConstuctor setTitle(String Title) {
+    ConstructorDemo setTitle(String Title) {
         this.Title = Title;
         return this;
     }
     
-    BookConstuctor setPublicationYear(int year) {
+    ConstructorDemo setPublicationYear(int year) {
         this.publicationyear = year;
         return this;
     }
@@ -77,7 +77,7 @@ public class BookConstuctor {
 	public static void main(String[]args) {
 		
 		//uses default constuctor
-		BookConstuctor bc1=new BookConstuctor();   
+		ConstructorDemo bc1=new ConstructorDemo();   
 		System.out.println(bc1.Author);
 		System.out.println(bc1.Title);
 		System.out.println(bc1.publicationyear);
@@ -86,13 +86,13 @@ public class BookConstuctor {
 		bc1.printThisObject();
 		
 		//uses parameterized constructor
-		BookConstuctor bc2=new BookConstuctor("AI on Trial","Shri Sujeet Kumar",2025); 
+		ConstructorDemo bc2=new ConstructorDemo("AI on Trial","Shri Sujeet Kumar",2025); 
 		System.out.println(bc2.Author);
 		System.out.println(bc2.Title);
 		System.out.println(bc2.publicationyear);
 		
 		//uses copy constructor
-		BookConstuctor bc3=new BookConstuctor(bc2);   // copies book2(bc2)
+		ConstructorDemo bc3=new ConstructorDemo(bc2);   // copies book2(bc2)
 		System.out.println(bc3.Author);
 		System.out.println(bc3.Title);
 		System.out.println(bc3.publicationyear);

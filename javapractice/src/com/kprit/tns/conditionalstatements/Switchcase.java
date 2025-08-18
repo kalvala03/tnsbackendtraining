@@ -1,4 +1,4 @@
-package javapractice;
+package com.kprit.tns.conditionalstatements;
 import java.util.Scanner;
 
 public class Switchcase {

@@ -1,4 +1,4 @@
-package javapractice;
+package com.kprit.tns.loops;
 import java.util.Scanner;
 
 public class WhileLoop {
