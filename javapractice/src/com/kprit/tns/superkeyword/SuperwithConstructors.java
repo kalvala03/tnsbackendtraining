@@ -19,13 +19,13 @@ public class SuperwithConstructors {
 	class Parent{
 		Parent(String name){
 			System.out.println("Parent constructor:"+name);
-
 		}
+		
 	}
 	class Child extends Parent{
 		Child(String name){
 			super(name);  //If the parent only has a parameterized constructor  then writing super(...) in the child’s constructor becomes mandatory.
-			//System.out.println("Child constructor:"+name);  //comment this if u want only parent construnctor to invoke
+			System.out.println("Child constructor:"+name);  
 		}
 		
 	}
