@@ -8,16 +8,14 @@ public class SuperwithMethod {
 	}
 	class Subclass extends Base{
 		void msg() {
+			super.msg();
 			System.out.println("This method is from Child class");
 		}
-		void display() {
-			msg();
-			super.msg();
-		}
 	}
+				
 	public static void main(String[]args) {
 		SuperwithMethod ob=new SuperwithMethod();
 		Subclass obj=ob.new Subclass();
-		obj.display();
+		obj.msg();
 	}
 }

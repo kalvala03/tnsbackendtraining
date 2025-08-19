@@ -16,22 +16,34 @@ public class SuperwithConstructors {
 		
 	}
 	*/
-	class Parent{
-		Parent(String name){
-			System.out.println("Parent constructor:"+name);
-		}
-		
+	class Parent {
+	    String surname;
+
+	    Parent(String surname) {
+	        this.surname = surname;  // just assigning, no print
+	    }
 	}
-	class Child extends Parent{
-		Child(String name){
-			super(name);  //If the parent only has a parameterized constructor  then writing super(...) in the child’s constructor becomes mandatory.
-			System.out.println("Child constructor:"+name);  
-		}
-		
+
+	class Child extends Parent {
+	    String name;
+
+	    Child(String surname, String name) {
+	        super(surname);   // call parent constructor to set surname
+	        this.name = name; // set child’s own variable
+	    }
+
+	    void display() {
+	        // Accessing inherited variable directly
+	        System.out.println("Surname (from Parent): " + surname);
+	        System.out.println("Name (from Child): " + name);
+	    }
 	}
-	
-	public static void main(String[]args) {
-		SuperwithConstructors ob1=new SuperwithConstructors();
-		Child ob=ob1.new Child("kalyani");
+
+	 public static void main(String[] args) {
+	        SuperwithConstructors ob1 = new SuperwithConstructors();
+	        Child ob = ob1.new Child("Kalvala", "Kalyani");
+
+	        ob.display(); 
 	}
+
 }
