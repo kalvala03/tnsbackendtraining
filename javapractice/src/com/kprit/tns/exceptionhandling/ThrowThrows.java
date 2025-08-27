@@ -10,7 +10,7 @@ public class ThrowThrows {
     public static void checkAgeWithThrows(int age) throws Exception {
         if (age < 18) {
             // throw exception explicitly
-            throw new Exception("You must be 18 or older to vote. (From throws method)");
+            throw new Exception("You must be 18 or older to vote.");
         } else {
             System.out.println("You can vote! (From throws method)");
         }
@@ -21,12 +21,12 @@ public class ThrowThrows {
         try {
             if (age < 18) {
                 // throw exception explicitly
-                throw new Exception("You must be 18 or older to vote. (From try-catch method)");
+                throw new Exception("You must be 18 or older to vote.");
             }
             System.out.println("You can vote! (From try-catch method)");
         } catch (Exception e) {
             // Handling the exception here
-            System.out.println("Exception caught: " + e.getMessage());
+            System.out.println("Exception caught from try-catch: " + e.getMessage());
         }
     }
 
@@ -37,7 +37,6 @@ public class ThrowThrows {
 
         // 1. Calling method that uses 'throws'
         //In this case, exception was declared with throws, but caller had to catch it.
-        System.out.println("\n--- Using throws ---");
         try {
             checkAgeWithThrows(age);
         } catch (Exception e) {
@@ -46,7 +45,6 @@ public class ThrowThrows {
 
         // 2. Calling method that uses try-catch
         //In this case, exception was handled inside the method.
-        System.out.println("\n--- Using try-catch ---");
         checkAgeWithTryCatch(age);
 
         sc.close();
