@@ -10,7 +10,7 @@ public class ThrowThrows {
     public static void checkAgeWithThrows(int age) throws Exception {
         if (age < 18) {
             // throw exception explicitly
-            throw new Exception("You must be 18 or older to vote.");
+            throw new Exception("You must be 18+ to vote.");
         } else {
             System.out.println("You can vote! (From throws method)");
         }
@@ -21,7 +21,7 @@ public class ThrowThrows {
         try {
             if (age < 18) {
                 // throw exception explicitly
-                throw new Exception("You must be 18 or older to vote.");
+                throw new Exception("You must be 18+ to vote.");
             }
             System.out.println("You can vote! (From try-catch method)");
         } catch (Exception e) {
