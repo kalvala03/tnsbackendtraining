@@ -28,6 +28,7 @@ public class Parameters {
 		System.out.println(obj.sum(10,20));   //10,20 are arguments
         
 		System.out.println(msg("kalyani"));
+		sc.close();
 	}
 
 }
