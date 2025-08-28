@@ -1,7 +1,7 @@
 package com.kprit.tns.exceptionhandling;
 import java.util.Scanner;
 
-public class ExceptionHandlingKeywords {
+public class TryCatchFinally {
 
 	public static void main(String[] args) {
 		System.out.println("Program Starts executing");

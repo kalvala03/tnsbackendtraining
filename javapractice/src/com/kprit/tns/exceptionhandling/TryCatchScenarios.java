@@ -1,6 +1,6 @@
 package com.kprit.tns.exceptionhandling;
 
-public class MultipleCatch {
+public class TryCatchScenarios {
 
 	public static void main(String[] args) {
 		// 1️)Multiple catch blocks for one try (Allowed)
