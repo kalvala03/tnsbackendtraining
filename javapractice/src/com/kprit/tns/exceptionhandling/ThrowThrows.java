@@ -1,53 +1,50 @@
 package com.kprit.tns.exceptionhandling;
 import java.util.Scanner;
+import java.io.*;
 
 public class ThrowThrows {
-	//We can throw our own exception using the throw keyword.
-	//After throwing, we have two choices: 
-	//either declare it in the method signature using throws, or handle it directly using a try-catch block
+	//Throw:We can throw our own exception using the throw keyword.
 	
-    // Method 1: Declares exception with 'throws'
-    public static void checkAgeWithThrows(int age) throws Exception {
+	 //  For unchecked exceptions, we don’t need to declare them using throws in the method signature.
+    public static void checkAgeWithThrows(int age) {
         if (age < 18) {
             // throw exception explicitly
-            throw new Exception("You must be 18+ to vote.");
+            throw new ArithmeticException("You must be 18+ to vote.");
         } else {
             System.out.println("You can vote! (From throws method)");
         }
     }
+    
+	
+	//Checked exceptions must be either:
+	//i)Declared in the method signature using throws, OR
+	//ii)Handled using try-catch.
+	
+	// Method 1: Declaring checked exception using 'throws'
+    public static void readFileWithThrows() throws IOException {
+        FileReader fr = new FileReader("test.txt"); // may throw IOException
+        System.out.println("File opened successfully! (From throws method)");
+    }
 
-    // Method 2: Handles exception with try-catch
-    public static void checkAgeWithTryCatch(int age) {
+    // Method 2: Handling checked exception with try-catch
+    public static void readFileWithTryCatch() {
         try {
-            if (age < 18) {
-                // throw exception explicitly
-                throw new Exception("You must be 18+ to vote.");
-            }
-            System.out.println("You can vote! (From try-catch method)");
-        } catch (Exception e) {
-            // Handling the exception here
-            System.out.println("Exception caught from try-catch: " + e.getMessage());
+            FileReader fr = new FileReader("test.txt"); // may throw IOException
+            System.out.println("File opened successfully! (From try-catch method)");
+        } catch (IOException e) {
+            System.out.println("Caught Checked Exception (try-catch): " + e.getMessage());
         }
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter age:");
-        int age = sc.nextInt();
-
-        // 1. Calling method that uses 'throws'
-        //In this case, exception was declared with throws, but caller had to catch it.
+        //Calling method that declares exception with 'throws'
         try {
-            checkAgeWithThrows(age);
-        } catch (Exception e) {
-            System.out.println("Exception caught from throws method: " + e.getMessage());
+            readFileWithThrows();
+        } catch (IOException e) {
+            System.out.println("Caught Checked Exception (throws method): " + e.getMessage());
         }
 
-        // 2. Calling method that uses try-catch
-        //In this case, exception was handled inside the method.
-        checkAgeWithTryCatch(age);
-
-        sc.close();
-        
+        // Calling method that handles exception with try-catch
+        readFileWithTryCatch();
     }
 }
