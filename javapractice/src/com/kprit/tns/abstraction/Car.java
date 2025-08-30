@@ -1,7 +1,8 @@
 package com.kprit.tns.abstraction;
 
 // Abstraction is the process of hiding implementation details and showing only essential features.
-//In this code, 'Car' defines abstract methods (accelerate, brake) but hides how they work,
+//Abstraction is achieved by (i)abstract classes (ii)Interfaces
+//In this example, 'Car' defines abstract methods (accelerate, brake) but hides how they work,
 //and each subclass (Tesla, Maruti) provides its own implementation.
 
 public abstract class Car {

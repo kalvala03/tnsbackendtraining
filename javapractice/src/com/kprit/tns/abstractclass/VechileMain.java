@@ -7,12 +7,12 @@ public class VechileMain {
 		
 	Vehicle.info(); // Static method called via class name
 
-    Car obj1 = new Car("Toyota Glanza");
+    Vehicle obj1 = new Car("Toyota Glanza");
     obj1.start();
     obj1.fuelType();
     obj1.stop(); // final method
 
-    ElectricBike obj2 = new ElectricBike("Ola");
+    Vehicle obj2 = new ElectricBike("Ola");
     obj2.start();
     obj2.fuelType();
     obj2.stop();
