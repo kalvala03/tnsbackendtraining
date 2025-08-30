@@ -85,12 +85,12 @@ public static void main(String[]args) {
 		System.out.println(obj3.publicationyear);
 		
 		// Method chaining example
-        obj3.setAuthor("Kalyani")
+        obj1.setAuthor("Kalyani")
            .setTitle("Learning Java")
            .setPublicationYear(2026);
-        System.out.println(obj3.Author);
-        System.out.println(obj3.Title);
-        System.out.println(obj3.publicationyear);
+        System.out.println(obj1.Author);
+        System.out.println(obj1.Title);
+        System.out.println(obj1.publicationyear);
 		
 		}
 }
