@@ -1,21 +1,22 @@
 package com.kprit.tns.superkeyword;
 
 public class SuperwithConstructors {
-	/*
-	class Parent{
-		Parent(){
+	//default constructor
+	class Parent1{
+		Parent1(){
 			System.out.println("Parent constructor");
 
 		}
 	}
-	class Child extends Parent{
-		Child(){
+	class Child1 extends Parent1{
+		Child1(){
 			//super(); if you don’t explicitly write super(), the compiler automatically inserts it for default constructors.
 			System.out.println("child constructor");
 		}
 		
 	}
-	*/
+	
+	//Parameterized constructor
 	class Parent {
 	    String surname;
 
@@ -25,23 +26,25 @@ public class SuperwithConstructors {
 	}
 
 	class Child extends Parent {
+		String surname;
 	    String name;
 
-	    Child(String surname, String name) {
-	        super(surname);   // call parent constructor to set surname
-	        this.name = name; // set child’s own variable
+	    Child(String parentSurname, String childSurname, String name) {
+	        super(parentSurname);       
+	        this.surname = childSurname; // sets Child.surname
+	        this.name = name;           // sets Child.name
 	    }
 
 	    void display() {
-	        // Accessing inherited variable directly
-	        System.out.println("Surname (from Parent): " + surname);
-	        System.out.println("Name (from Child): " + name);
-	    }
-	}
+	        System.out.println("Parent's Surname (using super): " + super.surname);
+	        System.out.println("Child's Surname (using this): " + this.surname);
+	        System.out.println("Child's Name: " + this.name);
+	    }	}
 
 	 public static void main(String[] args) {
 	        SuperwithConstructors ob1 = new SuperwithConstructors();
-	        Child ob = ob1.new Child("Kalvala", "Kalyani");
+	        Child1 obj = ob1.new Child1();
+	        Child ob = ob1.new Child("Kalvala","k.", "Kalyani");
 
 	        ob.display(); 
 	}
