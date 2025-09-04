@@ -8,7 +8,6 @@ public class StringBufferMethods {
         // 1. append() → adds string at the end
         sb.append(" World");
         System.out.println("append(): " + sb);
-
         // 2. insert() → inserts string at specific index
         sb.insert(6, "Java ");
         System.out.println("insert(): " + sb);
